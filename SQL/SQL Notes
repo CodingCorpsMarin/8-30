@@ -1,0 +1,14 @@
+
+Competencies
+
+Our applications need persistent data to function properly. 
+Databases are built to efficiently store lots of data independent of your programs, they exist on their own, but we will also be connecting them to our applications 
+One of the most common database languages is SQL, and a simple framework is SQLite
+Databases can be visually imagined like an excel spreadsheet with tables
+We communicate with the database through queries or commands through the console or even directly in our code
+
+
+Applications
+Understand databases and create a simple one
+Be familiar with SQL queries in the command line
+
