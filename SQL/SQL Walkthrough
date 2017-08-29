@@ -1,0 +1,73 @@
+First let’s see if SQLite is installed
+
+In console: 
+
+Which sqlite3
+
+
+If not installed: 
+
+ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+
+brew install sqlite
+Install From Binary
+
+
+On windows: 
+
+https://mislav.net/rails/install-sqlite3/
+
+
+Test db
+sqlite3 test_sqlite.db
+
+sqlite3 brings up sqlite3 interface, test_sqlite.db makes a new database called test_sqlite
+
+
+.quit will exit sqlite3
+
+Now let’s make a database for real:
+sqlite3 zoo_database.db
+CREATE TABLE tigers (
+	id INTEGER PRIMARY KEY,
+		name TEXT,
+		age INTEGER
+);
+
+CREATE TABLE = create a new table
+id/name/age = names of columns
+INTEGER/TEXT/REAL/etc = different data types 
+PRIMARY KEY = index (starts at 1)
+
+Can always refer to SQL docs or .help for more info
+
+Check the tables in your database with .tables
+Check the schema (structure) with .schema
+
+Alter table with ALTER TABLE tigers ADD COLUMN color TEXT;
+
+Check schema to see changes
+
+Drop table (delete) with DROP TABLE
+
+Add data to our table:
+
+INSERT INTO tigers (name, age, color) VALUES (‘Tony’, 3, ‘orange’);
+Add some more
+INSERT INTO tigers (name, age, color) VALUES (‘Hobbes’, 7, ‘orange’);
+INSERT INTO tigers (name, age, color) VALUES (‘Roy’, 10, ‘white’);
+INSERT INTO tigers (name, age, color) VALUES (‘Sasha’, 3, ‘orange’);
+
+Now call (query) these values:
+SELECT id, name, age, color FROM tigers; (bring back everything, can also use *, wildcard)
+
+Call names:
+SELECT name FROM tigers;
+Call ages:
+SELECT age FROM tigers;
+Multiple columns:
+SELECT name, age FROM tigers;
+
+Query specifics (only orange):
+SELECT name FROM tigers WHERE color = “orange”;
