@@ -8,7 +8,7 @@ Intro to SQL and Databases
 
 Flatiron SQL Getting Started Chapter
 
-Additional Resources: 
+### Additional Resources: 
 
 https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/
 
